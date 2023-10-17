@@ -19,7 +19,7 @@ function App() {
         <Signup/>
         <Signin setUser={setUser} />
         <AddTodo user={user} setTodos={setTodos}/>
-        <Todos todos={todos}  setTodos={setTodos} setTodoid={setTodoid} setCheck={setCheck} user={user} setUser={setUser}/> </>: <><UpdateTodo user={user} todoid={todoid} setCheck={setCheck}/></> 
+        <Todos todos={todos} setTodos={setTodos} setTodoid={setTodoid} setCheck={setCheck} user={user} setUser={setUser}/> </>: <><UpdateTodo user={user} todoid={todoid} setTodos={setTodos} setCheck={setCheck}/></> 
       }
       
     </div>

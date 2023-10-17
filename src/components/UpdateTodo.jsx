@@ -18,15 +18,16 @@ const Signup = ({ user, setTodos, setCheck, todoid }) => {
     fetch('http://localhost:4000/user/updatetodo', options)
       .then(response => response.json())
       .then(data => {
-        setCheck(prev => !prev)
+        console.log(data);
         setTodos(prev => prev.map(todo => {
-          if(prev._id === todoid){
+          if(todo._id === todoid){
             return data.todo
           }
           else{
             return todo
           }
         }))
+        setCheck(prev => !prev)
       })
       .catch(error => console.error(error));
   }

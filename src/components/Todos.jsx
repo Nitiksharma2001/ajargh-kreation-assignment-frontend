@@ -47,7 +47,7 @@ const Signup = ({ user, setUser, todos, setTodos, setTodoid, setCheck }) => {
             <div key={todo._id}>
               <div>{todo.title}</div>
               <div>{todo.description}</div>
-              <input type="checkbox" checked={todo.isDone} />
+              <input type="checkbox" defaultChecked={todo.isDone} />
               <button onClick={() => handleClick(todo._id)}>Delete</button>
               <button onClick={() => {
                 setCheck(false)
