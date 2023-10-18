@@ -15,7 +15,7 @@ const Signup = ({ user, setTodos }) => {
       },
       body: JSON.stringify({title, description})
     }
-    fetch('http://localhost:4000/user/addtodo', options)
+    fetch('https://ajargh-kreaction-assignment.onrender.com/user/addtodo', options)
       .then(response => response.json())
       .then(data => setTodos(prev => [...prev, data.todo]))
       .catch(error => console.error(error));

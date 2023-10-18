@@ -12,7 +12,7 @@ const Signup = () => {
       },
       body: JSON.stringify({name, email, password})
     };
-    fetch('http://localhost:4000/signup', options)
+    fetch('https://ajargh-kreaction-assignment.onrender.com/signup', options)
       .then(response => response.json())
       .then(data => console.log(data))
       .catch(error => console.error(error));

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
 const Signup = ({setUser}) => {
-  const [email, setEmail] = useState('nitik@nitik.com')
-  const [password, setPassword] = useState('nitik')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   const handleClick = () => {
     const options = {
       method: 'POST',
@@ -11,10 +11,9 @@ const Signup = ({setUser}) => {
       },
       body: JSON.stringify({email, password})
     };
-    fetch('http://localhost:4000/signin', options)
+    fetch('https://ajargh-kreaction-assignment.onrender.com/signin', options)
       .then(response => response.json())
       .then(data => {
-        console.log({...data.user, token: data.token});
         setUser({...data.user, token: data.token})
       })
       .catch(error => console.error(error));

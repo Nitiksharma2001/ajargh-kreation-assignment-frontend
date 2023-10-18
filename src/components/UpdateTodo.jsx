@@ -15,10 +15,9 @@ const Signup = ({ user, setTodos, setCheck, todoid }) => {
       },
       body: JSON.stringify({todoid, title, description, isDone})
     }
-    fetch('http://localhost:4000/user/updatetodo', options)
+    fetch('https://ajargh-kreaction-assignment.onrender.com/user/updatetodo', options)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         setTodos(prev => prev.map(todo => {
           if(todo._id === todoid){
             return data.todo

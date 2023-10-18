@@ -10,10 +10,9 @@ const Signup = ({ user, setUser, todos, setTodos, setTodoid, setCheck }) => {
           Authorization: 'bearer ' + user.token,
         },
       }
-      fetch('http://localhost:4000/user/todos', options)
+      fetch('https://ajargh-kreaction-assignment.onrender.com/user/todos', options)
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
           setTodos(data)
         })
         .catch((error) => console.error(error))
@@ -28,13 +27,12 @@ const Signup = ({ user, setUser, todos, setTodos, setTodoid, setCheck }) => {
       },
       body: JSON.stringify({todoid})
     }
-    fetch('http://localhost:4000/user/deletetodo', options)
+    fetch('https://ajargh-kreaction-assignment.onrender.com/user/deletetodo', options)
       .then((response) => response.json())
       .then((data) => {
         setUser(prev => {
           return {...prev, todos: data.user.posts}
         })
-        console.log(data);
       })
       .catch((error) => console.error(error))
   }
