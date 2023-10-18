@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 const Signup = ({ user, setTodos }) => {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
   const handleClick = () => {
+    if(!title || !description || !user){
+      return ;
+    }
     const options = {
       method: 'POST',
       headers: {

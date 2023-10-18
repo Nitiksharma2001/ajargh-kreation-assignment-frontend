@@ -33,9 +33,9 @@ const Signup = ({ user, setTodos, setCheck, todoid }) => {
   }
   return <div>
     <h1>Add a Todo</h1>
-    <div> title: <input type="text" onChange={(e) => setTitle(e.target.value)} value={title} /></div>
-    <div> description: <input type="text" onChange={(e) => setDescription(e.target.value)} value={description} /></div>
-    <div> isDone: <input type="checkbox" checked={isDone} onChange={(e) => setIsDone(e.target.checked)} /> </div>
+    <div> <b>title:</b> <input type="text" onChange={(e) => setTitle(e.target.value)} value={title} /></div>
+    <div> <b>description:</b> <input type="text" onChange={(e) => setDescription(e.target.value)} value={description} /></div>
+    <div> <b>isDone:</b><input type="checkbox" checked={isDone} onChange={(e) => setIsDone(e.target.checked)} /> </div>
     <button onClick={handleClick}>Submit</button>
   </div>
 }

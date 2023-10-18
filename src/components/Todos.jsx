@@ -44,10 +44,10 @@ const Signup = ({ user, setUser, todos, setTodos, setTodoid, setCheck }) => {
       <div>
         {todos.map((todo) => {
           return (
-            <div key={todo._id}>
-              <div>{todo.title}</div>
-              <div>{todo.description}</div>
-              <input type="checkbox" defaultChecked={todo.isDone} />
+            <div key={todo._id} style={{border: '1px solid black'}}>
+              <div><b>Title: </b>{todo.title}</div>
+              <div><b>Description: </b>{todo.description}</div>
+              <div><b>Done: </b> <input type="checkbox" defaultChecked={todo.isDone} /></div>
               <button onClick={() => handleClick(todo._id)}>Delete</button>
               <button onClick={() => {
                 setCheck(false)
