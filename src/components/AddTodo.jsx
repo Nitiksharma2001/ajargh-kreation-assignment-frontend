@@ -22,8 +22,8 @@ const Signup = ({ user, setTodos }) => {
   }
   return <div>
     <h1>Add a Todo</h1>
-    <div> title: <input type="text" onChange={(e) => setTitle(e.target.value)} value={title} /></div>
-    <div> description: <input type="text" onChange={(e) => setDescription(e.target.value)} value={description} /></div>
+    <div> <b>title:</b> <input type="text" onChange={(e) => setTitle(e.target.value)} value={title} /></div>
+    <div><b>description:</b>  <input type="text" onChange={(e) => setDescription(e.target.value)} value={description} /></div>
     <button onClick={handleClick}>Submit</button>
   </div>
 }
